@@ -1,0 +1,53 @@
+ 
+ 
+import Typical from 'react-typical'
+ <Typical className= "typo"
+    loop={Infinity}
+    wrapper="b"
+    steps={
+    [
+        ' Web Develop',1000,
+        ' Create Content', 1000,
+        ' Web Design', 1000,
+        ' Search Engine Optimization',1000
+    ]
+}></Typical>
+
+
+
+
+
+import { init } from 'ityped'
+import { useEffect, useRef } from "react"
+
+  
+  const textRef = useRef();
+
+  useEffect(() => {
+
+    init(textRef.current, { 
+      showCursor: true, 
+      string :['Put your strings here...', 'and Enjoy!'],
+    });
+  }, []);
+   ref={textRef}
+
+
+
+
+import Typewriter from "typewriter-effect";
+   <Typewriter
+        onInit={(typewriter)=> {
+        typewriter
+        .typeString(" Web Desing") 
+        .pauseFor(1000)
+        .deleteAll()
+        .typeString(" Create Content") 
+        .pauseFor(1000)
+        .deleteAll()
+        .typeString(" Web Development")
+        .pauseFor(1000)
+        .deleteAll()
+        .start()
+        }}
+    />
